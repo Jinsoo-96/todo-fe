@@ -10,7 +10,9 @@ const TodoItem = ({ item, onDeleteTask, onUpdateTask }) => {
           <div className="todo-content">{item.task}</div>
 
           <div>
-            <span className="todo-date">마지막 업데이트 : {formattedDate}</span>
+            <span className="todo-date">
+              마지막 업데이트 : {formattedDate} by {item.author.name}
+            </span>
             <button
               className="button-delete"
               onClick={() => onDeleteTask(item._id)}
